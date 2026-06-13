@@ -1,4 +1,11 @@
 # Star-Galaxy-Classification-Using-k-Nearest-Neighbour
-By using k-NearestNeighbour method, we can determine which is an actual star, quasar, and galaxy.
+## Objective
+The core objective of this project is to build an automated machine learning classifier that can accurately categorize astronomical objects into one of three distinct classes: Stars, Galaxies, or Quasars (QSOs).
+Data Source & Domains
 
-In K-Nearest Neighbours (KNN) classification, "voting" is the mechanism used to predict the class of a new, unseen data point. When a new point is introduced, the algorithm finds the K closest training examples (neighbors) to it and assigns the new point to the class that receives the majority of votes among those neighbors.
+The data is sourced from the Sloan Digital Sky Survey (SDSS - Skyserver), a major multi-spectral imaging and spectroscopic redshift survey. This is a classic multi-class classification problem intersecting data science and astrophysics (astroinformatics).
+
+## Problem Nuances
+- Astrometry vs. Photometry: The dataset contains spatial coordinates (ra, dec) alongside brightness measurements across five different filters (u, g, r, i, z) known as the SDSS photometric system.
+
+- Class Imbalance: Galaxies (4,998) and Stars (4,152) dominate the dataset, while Quasars are significantly rarer (850). This class imbalance requires a strategy like stratified splitting to ensure the model learns robust boundaries for the minority class.
