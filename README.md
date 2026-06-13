@@ -17,6 +17,6 @@ An initial verification check shows the shape of the dataset is (10000,18). The 
 The script splits the 18 raw columns into Target Variables, Informative Predictive Features, and Metadata Artifacts:
 - Target: class (Encoded via LabelEncoder to mapping: {'GALAXY': 0, 'QSO': 1, 'STAR': 2}).
 - Predictive Features: * ra, dec: Right Ascension and Declination (celestial coordinates).
- - u, g, r, i, z: Magnitudes corresponding to Ultraviolet, Green, Red, Near-Infrared, and Infrared filters.
- - redshift: The spectroscopic measurement of how much the wavelength of light from an object has stretched, indicating distance and velocity.
+  - u, g, r, i, z: Magnitudes corresponding to Ultraviolet, Green, Red, Near-Infrared, and Infrared filters.
+  - redshift: The spectroscopic measurement of how much the wavelength of light from an object has stretched, indicating distance and velocity.
 - Excluded Metadata: Identifiers like objid, specobjid, run, rerun, camcol, field, plate, mjd, and fiberid are deliberately filtered out. These variables represent camera configurations, data release batches, or processing dates, which carry zero physical meaning regarding the identity of the celestial object. Including them would risk introducing data leakage or overfit noise.
